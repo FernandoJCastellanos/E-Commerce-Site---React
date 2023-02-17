@@ -1,0 +1,105 @@
+
+/* NavBar Item Container */
+
+.NavBarDesktopContainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.NavItemLogoContainer{
+    position: absolute;
+    display: flex;
+    margin-right: 100px;
+    left: 15%;
+}
+
+.LinkContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    transform: translateY(25%);
+    justify-content: space-between;
+    gap: 3rem;
+    left: 30%;
+}
+
+.NavBarDesktopLinks{
+    text-decoration: none;
+    color: black;
+}
+
+.NavItemShoppingContainer{
+    position: absolute;
+    display: flex;
+    left: 80%;
+    transform: translateY(25%);
+}
+
+.NavItemProfileIconContainer{
+    position: absolute;
+    display: flex;
+    left: 90%;
+    transform: translateY(25%);
+}
+
+
+.NavBarItemTextDeskop {
+    text-decoration: none;
+    color: black;
+}
+
+
+.NavDesktopHR{
+    width: 70%;
+    height: 2px;
+    background-color: grey;
+    border: none;
+    position: absolute;
+    top: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

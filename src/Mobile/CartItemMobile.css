@@ -1,0 +1,45 @@
+
+
+/* Shopping Cart Content */
+.CartItemContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100px;
+}
+
+
+.CartItemImage{
+    position: absolute;
+    display: flex;
+    height: 60px;
+    width: auto;
+    border-radius: 5px;
+    left: 5%;
+}
+
+
+.CartItemName{
+    position: relative;
+    display: flex;
+    margin-bottom: 0;
+}
+
+
+
+.CartItemPrice{
+    position: relative;
+    display: flex;
+    margin-bottom: 0;   
+}
+
+
+.CartItemRemoveIcon{
+    position: absolute;
+    display: flex;
+    width: auto;
+    height: 22px;
+    right: 10%;
+    top: 20%;
+}

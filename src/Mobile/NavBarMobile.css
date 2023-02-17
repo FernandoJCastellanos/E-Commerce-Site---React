@@ -1,0 +1,241 @@
+
+
+/* NavBarMobile *//* NavBarMobile *//* NavBarMobile */
+
+
+.NavBarContainerMobile {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    align-items: center;
+    top: 0vh;
+    z-index: 2;
+}
+
+.BrandLogo {
+    position: relative;
+    display: flex;
+    left: 15%;
+}
+
+
+/* Burger */ /* Burger */ /* Burger */ /* Burger */
+
+.BurgerContainerMobile{
+    position: relative;
+    display: flex;
+}
+
+.BurgerIconMobile {
+    position: absolute;
+    display: flex;
+    left: 4vw;
+    top: -10px;
+}
+
+.BurgerMenuMobile {
+    position:absolute;
+    display: flex;
+    background-color: #fff;
+    z-index: 5;
+    width: 300px;
+    height: 100vh;
+    top: -25px;
+}
+
+.NavBarItemCloseMobile {
+    position: absolute;
+    display: flex;
+    left: 4vw;
+    top: 15px;
+}
+
+
+
+/* Shopping Cart Icon */ /* Shopping Cart Icon */ /* Shopping Cart Icon */
+
+/* Icon */
+.ShoppingCartIconMobile {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 20px;
+    right: 0%;
+    height: 100%;
+    top: 20%;
+    left: 85%;
+}
+
+.shoppingcartimg{
+    position: absolute;
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+/* Item Quantity */
+.ItemQuantity{
+    color: #fff;
+    font-size: 0.6rem;
+}
+
+
+/* ShoppingCartMenu */
+.ShoppingCartMenuBox {
+    position: relative;
+    width: 90vw;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    flex-direction: column;
+    left: -2%;
+}
+
+.ShoppingCartMenuTitle {
+    position: relative;
+    display: flex;
+    left: 5%;
+    top: 15px;
+    width: 50%;
+}
+
+
+.CartHR {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 1px;
+    border: 5px, 0, 0, 0,;
+    background-color: grey;
+    border-style: none;
+    opacity: 20%;
+}
+
+
+.ShoppingCartMenuCart{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+    opacity: 100%;
+    height: 100%;
+}
+
+.ShoppingCartNoItems{
+    position: relative;
+    display: flex;
+    height: 200px;
+    align-items: center;
+}
+
+
+
+
+
+
+/* Appear Disappear Functionality */
+.ShoppingCartMenuShow {
+    position: absolute;
+    display: flex;
+    visibility: visible;
+    top: 70px;
+    transform: translateX(-85%);
+ }
+
+ .ShoppingCartHidden {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+
+
+
+
+.ProfileIconMobile {
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    display: flex;
+    left: 70%;
+}
+
+
+
+/* NavBar Burger */ /* NavBar Burger */ /* NavBar Burger */
+
+.NavBarItemTextMobile {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    left: 35%;
+    text-align: left;
+    top: 50px;
+}
+
+.NavBarBurgerShow {
+    display: flex;
+    position: relative;
+    visibility: visible;
+ }
+ 
+ .NavBarBurgerHidden {
+     display: flex;
+     position: relative;
+     visibility: hidden;
+ }
+
+
+ .GrayBackgroundOn {
+    background-color: black;
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    opacity: 80%;
+    z-index: 4;
+    top: -25px;
+}
+.GrayBackgroundOff {
+ position: relative;
+}
+
+.NavBarHidden {
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
