@@ -47,10 +47,10 @@ function NavItemShoppingCartMobile() {
 
     return (
     <div >
-        <button className='buttonhitbox' onClick={ShoppingCartTrigger}>
+        <button onClick={ShoppingCartTrigger}>
                 {/* Item Quantity Badge */}
                 {itemQuantity > 0 ? (
-                <div className="ItemQuantityContainer">
+                <div>
                     <p className='ItemQuantity'>{itemQuantity}</p>
                 </div>
                 ) : (

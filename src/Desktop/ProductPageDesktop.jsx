@@ -1,14 +1,14 @@
-// Enviroment
+// Environment
 import React from 'react';
+// import Test from "./test.jsx"
 
 // CSS
-import './ProductPageDesktop';
+import './ProductPageDesktop.css';
 
 // Components
-// import ItemImagePreview from './ItemImagePreviewLogo';
-// import ItemImageList from './ItemImageList';
-// import ItemDescription from './ItemDescription';
-// import ItemAddToCart from './ItemAddToCart';
+
+import ProductList  from "../data.js";
+import ProductCardDesktop from './ProductCardDesktop.jsx';
 
 
 
@@ -16,11 +16,11 @@ import './ProductPageDesktop';
 function ProductPageDesktop() {
     return (
         <div>
-            {/* <ItemImagePreview />
-            <ItemImageList />
-            <ItemDescription />
-            <ItemAddToCart /> */}
+            {ProductList.map((product)=>(
+                <ProductCardDesktop data={product} key={product.id}  />
+            ))}
         </div>
     );
 }
+// this gets exported to ProductPage
 export default ProductPageDesktop;

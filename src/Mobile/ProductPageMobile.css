@@ -1,12 +1,10 @@
-
-
 /* ProductImagePreviewMobile *//* ProductImagePreviewMobile *//* ProductImagePreviewMobile */
 
 .CarouselContainer {
     position: relative;
     display: flex;
     width: 100%;
-    z-index: 0;
+    z-index: 0; 
 }
 
 
@@ -221,7 +219,6 @@
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    box-shadow: chartreuse;
 }
 
 .CartIcon {

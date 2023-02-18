@@ -3,6 +3,7 @@ import React from 'react';
 
 // CSS
 import "./NavBarMobile.css"
+
 // Components
 import NavItemLogo from '../NavItemLogo';
 import NavItemBurgerMobile from './NavItemBurgerMobile';

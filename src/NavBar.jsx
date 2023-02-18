@@ -5,8 +5,8 @@ import React from 'react';
 
 
 // Components
-// import NavMobile from './Mobile/NavMobile';
-import NavDesktop from './Desktop/NavDesktop';
+import NavMobile from './Mobile/NavMobile';
+// import NavDesktop from './Desktop/NavDesktop';
 
 
 
@@ -14,10 +14,9 @@ import NavDesktop from './Desktop/NavDesktop';
 function NavBar() {
     return (
         <div>
-            {/* <NavMobile  /> */}
-            <NavDesktop />
+            <NavMobile  />
+            {/* <NavDesktop /> */}
         </div>
-
     );
 }
 // this gets exported App.js

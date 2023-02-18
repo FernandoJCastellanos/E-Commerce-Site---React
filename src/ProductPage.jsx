@@ -5,7 +5,7 @@ import React from 'react';
 
 // Components
 import ProductPageMobile from "./Mobile/ProductPageMobile";
-// import ProductPageDesktop from "./ProductPageDesktop";
+// import ProductPageDesktop from "./Desktop/ProductPageDesktop";
 
 
 

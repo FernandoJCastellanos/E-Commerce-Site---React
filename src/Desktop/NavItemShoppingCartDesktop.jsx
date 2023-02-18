@@ -2,7 +2,7 @@
 import React, {useState, useContext} from 'react';
 
 // CSS
-
+import "./NavBarDesktop.css"; 
 
 // Components
 import iconCart from "../images/icon-cart.svg"
@@ -50,11 +50,11 @@ function NavItemShoppingCartDesktop() {
         <button  onClick={ShoppingCartTrigger}>
                 {/* Item Quantity Badge */}
                 {itemQuantity > 0 ? (
-                <div className="ItemQuantityContainer">
+                <div>
                     <p className='ItemQuantity'>{itemQuantity}</p>
                 </div>
                 ) : (
-                    <div className='ItemQuantityContainerHidden'></div>
+                    <div></div>
                 )}
             <img  src={iconCart} alt="Shopping Cart Icon" />
         </button>

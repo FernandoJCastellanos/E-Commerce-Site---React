@@ -76,10 +76,17 @@
     width: 50px;
     height: 50px;
 }
+
 /* Item Quantity */
 .ItemQuantity{
     color: #fff;
     font-size: 0.6rem;
+    background-color: orange;
+    border-radius: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 70%;
 }
 
 
@@ -150,9 +157,6 @@
     visibility: hidden;
     display: none;
 }
-
-
-
 
 .ProfileIconMobile {
     position: absolute;
