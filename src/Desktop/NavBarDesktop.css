@@ -1,6 +1,6 @@
 /* NavBar Item Containers */
 
-.NavBarDesktopContainer {
+.NavBarDesktopContainerDesktop {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -12,21 +12,21 @@
 }
 
 
-.NavItemLogoContainer{
+.NavItemLogoContainerDesktop{
     position: absolute;
     display: flex;
     margin-right: 100px;
-    left: 15%;
+    left: 10%;
 }
 
-.LinkContainer{
+.LinkContainerDesktop{
     position: absolute;
     display: flex;
     flex-direction: row;
     transform: translateY(25%);
     justify-content: space-between;
     gap: 3rem;
-    left: 30%;
+    left: 25%;
 }
 
 .NavBarDesktopLinks{
@@ -34,17 +34,17 @@
     color: black;
 }
 
-.NavItemShoppingContainer{
-    position: absolute;
-    display: flex;
-    left: 75%;
-    transform: translateY(25%);
-}
-
-.NavItemProfileIconContainer{
+.NavItemShoppingContainerDeskop{
     position: absolute;
     display: flex;
     left: 80%;
+    transform: translateY(25%);
+}
+
+.NavItemProfileIconContainerDeskop{
+    position: absolute;
+    display: flex;
+    left: 85%;
     transform: translateY(25%);
     height: 50%;
     width: auto;
@@ -58,7 +58,7 @@
 
 
 .NavDesktopHR{
-    width: 70%;
+    width: 80%;
     height: 2px;
     background-color: grey;
     border: none;
@@ -113,10 +113,12 @@
     position: relative;
     width: 400px;
     height: 100%;
-    background-color: #fff;
     border-radius: 15px;
     flex-direction: column;
     left: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
 }
 .ShoppingCartMenuTitle {
     position: relative;

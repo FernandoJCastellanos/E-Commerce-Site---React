@@ -17,13 +17,12 @@ import NavItemProfileIcon from '../NavItemProfileIcon';
 function NavBarMobile() {
     return (
         <div className='NavBarContainerMobile'>
-        
-                <NavItemBurgerMobile />
 
-            <div className='BrandLogo'>
+                <NavItemBurgerMobile />
+            <div className='BrandLogoMobile'>
                 <NavItemLogo  />
             </div>
-            
+
             <div className='ShoppingCartIconMobile'>
                 <NavItemShoppingCartMobile />
             </div>

@@ -21,7 +21,7 @@ function App() {
       <ShopContextProvider>
         <Router>
           <NavBar className="App-header" />
-          <ProductPage />
+            <ProductPage />
           </Router>
       </ShopContextProvider>
     </main>

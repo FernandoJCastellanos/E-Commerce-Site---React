@@ -7,13 +7,14 @@ import './ProductPageMobile.css';
 
 // Components
 
-import ProductList  from "../data.js";
+import ProductList  from "../data.json";
 import ProductCardMobile from './ProductCardMobile.jsx';
 
 
 
 
 function ProductPageMobile() {
+
     return (
         <div>
             {ProductList.map((product)=>(

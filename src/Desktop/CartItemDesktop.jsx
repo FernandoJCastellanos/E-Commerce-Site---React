@@ -3,7 +3,8 @@ import React, {useContext, useState} from "react";
 
 
 // CSS
-import "./CartItemDesktop.css"
+import "./CartItemDesktop.css";
+
 
 // Components
 import RemoveIcon from "../images/icon-delete.svg";
@@ -14,7 +15,7 @@ export default function CartItem(props) {
 
 
     // Getting data from product
-    const {companyName, productName, productDescription, img1, img2, img3, img4, productPrice, productDiscount, id} = props.data;
+    const {companyName, productName, productDescription, images, productPrice, productDiscount, id} = props.data;
   
     // Setting Prices
     const actualPrice = (productPrice * productDiscount) / 100;
@@ -23,11 +24,11 @@ export default function CartItem(props) {
     const {cartItems, removeFromCart,   } = useContext(ShopContext);
 
 
-
     const totalPrice = actualPrice*cartItems[id];
 
-    
 
+    const image1 = images[0]
+    
 
   return (
     <div className='CartItemContainer'>
@@ -35,13 +36,13 @@ export default function CartItem(props) {
       <div >
 
         <div >
-          <img className='CartItemImage' src={img1} alt="ProductImage" />
+          <img className='CartItemImage' src={process.env.PUBLIC_URL + image1.url} alt="ProductImage" />
         </div>
         
         <div className='CartItemNameContainer'>
           <p className='CartItemName'>{productName}</p>
         </div>
-               
+
         <div className="CartItemPriceContainer">
           <p className='CartItemPrice'>${actualPrice}.00 x {cartItems[id]} ${totalPrice}</p>
         </div>

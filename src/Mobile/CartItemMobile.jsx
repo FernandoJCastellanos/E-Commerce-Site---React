@@ -10,11 +10,15 @@ import RemoveIcon from "../images/icon-delete.svg";
 import { ShopContext } from "../shop-context";
 
 
+
+
+
+// this gets exported to NavItemShoppingCartMobile
 export default function CartItem(props) {
 
 
     // Getting data from product
-    const {companyName, productName, productDescription, img1, img2, img3, img4, productPrice, productDiscount, id} = props.data;
+    const {productName, images, productPrice, productDiscount, id} = props.data;
   
     // Setting Prices
     const actualPrice = (productPrice * productDiscount) / 100;
@@ -26,6 +30,7 @@ export default function CartItem(props) {
 
     const totalPrice = actualPrice*cartItems[id];
 
+    const image1 = images[0]
     
 
 
@@ -35,7 +40,7 @@ export default function CartItem(props) {
       <div >
 
         <div >
-          <img className='CartItemImage' src={img1} alt="ProductImage" />
+          <img className='CartItemImage' src={process.env.PUBLIC_URL + image1.url} alt="ProductImage" />
         </div>
         
         <div className='CartItemNameContainer'>

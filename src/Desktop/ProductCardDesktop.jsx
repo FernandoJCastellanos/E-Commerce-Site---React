@@ -15,12 +15,10 @@ import IconCart from "../images/icon-cart.svg"
 
 
 
-
-
 const ProductCardMobile = (props) => {
 
     // Getting data from product
-    const {companyName, productName, productDescription, img1, img2, img3, img4, productPrice, productDiscount, id} = props.data;
+    const {companyName, productName, productDescription, productPrice, productDiscount, id, images} = props.data;
 
     // here we deconstruct and extract functions from Context.Provider wrapper
     const { addToCart, count, handleAddProduct, handleSubtractProduct } = useContext(ShopContext);
@@ -40,124 +38,115 @@ const ProductCardMobile = (props) => {
     const [discount, setDiscount] = useState(productDiscount);
 
     const actualPrice = price - (price * discount) / 100;
+    
+    const FirstImage = images[0]
+    const setFirstImage = FirstImage.url
 
+    const [ mainImageState, setMainImageState ] = useState(setFirstImage);
 
-
-
-
-
-
-
-
-
-
-
+    const HandleSetMainImageState = (url) => {
+        setMainImageState(url)
+    }
 
 
 
 return (
-    <div >
+    <div className="ProductPageContainerDesktop" >
 
         {/* Image Container */}{/* Image Container */}{/* Image Container */}
-        <div className="ImageContainer">
-            <div className="MainImageContainer">
-                <image className="" ></image>
+        <div className="ImageContainerDesktop">
+            <div  >
+                <img className="MainImageDesktop" src={mainImageState} alt="MainImageDisplay" />
             </div>
-            <div className="SmallImageContainer">
-                <div className="SmallImage">
-                    <button><img src=""  /></button>
-                </div>
-                <div className="SmallImage">
-
-                </div>
-                <div className="SmallImage">
-
-                </div>
-                <div className="SmallImage">
-
-                </div>
+            <div className="SmallImageContainerDesktop" >
+                {images.map((j) => {
+                    return (
+                    <div >
+                        <button className="ButtonImageDesktop" onClick={() => HandleSetMainImageState(j.url)}  >
+                            <img className="SmallImageDesktop" src={j.url} alt={j.alt} />
+                        </button>
+                    </div>
+                    )})}
             </div>
         </div>
 
-
-        {/* Product Information Tab */} {/* Product Information Tab */} {/* Product Information Tab */}
-        <div  className='ProductInformationContainer'>
-            {/* Product Brand */}
-            <div className='ProductCompanyContainer'>
-                <p className="ProductCompany">
-                    {companyName}
-                </p>
+        <div className="ProductContainerDesktop" >
+            {/* Product Information Tab */} {/* Product Information Tab */} {/* Product Information Tab */}
+            <div className='ProductInformationContainerDesktop'  >
+                {/* Product Brand */}
+                <div>
+                    <p className="ProductCompanyDesktop">
+                        {companyName}
+                    </p>
+                </div>
+                {/* Product Name */}
+                <div  className='ProductNameContainerDesktop'>
+                    <p className="ProductNameDesktop">
+                        {productName}
+                    </p>
+                </div>
+                {/* Product Description */}
+                <div className='ProductDescriptionContainerDesktop'>
+                    <p className="ProductDescriptionDesktop">
+                        {productDescription}
+                    </p>
+                </div>
             </div>
-            {/* Product Name */}
-            <div  className='ProductNameContainer'>
+
+
+            {/* Product Price Feature */}  {/* Product Price Feature */}  {/* Product Price Feature */}
+            {/* Price, Discount and Actual Price */}
+            <div className='PricingContainerDesktop'>
+                <div className='PriceActualDesktop'>
+                    <p>
+                    {"$" + actualPrice}
+                    </p>
+                </div>
+
                 
-                <p className="ProductName">
-                    {productName}
-                </p>
-            </div>
-            {/* Product Description */}
-            <div className='ProductDescriptionContainer'>
-                <p className="ProductDescription">
-                    {productDescription}
-                </p>
-            </div>
-        </div>
+                <div className='PriceDiscountDesktop'>
+                    <div className='PriceDiscountBoxDesktop'></div>
+                        <p>
+                        {discount + "%"} 
+                        </p>
+                    </div>
 
-
-        {/* Product Price Feature */}  {/* Product Price Feature */}  {/* Product Price Feature */}
-        {/* Price, Discount and Actual Price */}
-        <div className='PricingContainer'>
-          <div className='PriceActual'>
-            <p>
-              {"$" + actualPrice}
-            </p>
-          </div>
-
-         
-          <div className='PriceDiscount'>
-          <div className='PriceDiscountBox'></div>
-            <p>
-              {discount + "%"} 
-            </p>
-          </div>
-
-          <div className='PriceOld'>
-            <p>
-              {"$" + price}
-            </p>
-          </div>
-
-        </div>
-
-
-        {/* Product Add and Subtract */}
-        <div className='ItemCounterContainer'>
-            <div className='ItemCounterBackground'></div>
-
-                <div className='MinusButton'>
-                    <button onClick={handleSubtractProduct}><img src={IconMinus} alt="Subtract Icon"/></button>
+                    <div className='PriceOldDesktop'>
+                        <p>
+                        {"$" + price}
+                        </p>
+                    </div>
                 </div>
 
-                <p className='Count'>
-                    <span>{count}</span>
-                </p>
 
-                <div className='PlusButton'>
-                    <button onClick={handleAddProduct}><img src={IconPlus} alt="Add Icon" /></button>
+            {/* Product Add and Subtract */}
+            <div className="ShoppingContainerDesktop">
+                <div className='ItemCounterContainerDesktop'>
+                    <div className='ItemCounterBackgroundDesktop'></div>
+
+                        <div className='MinusButtonDesktop'>
+                            <button onClick={handleSubtractProduct}><img src={IconMinus} alt="Subtract Icon"/></button>
+                        </div>
+
+                        <p className='CountDesktop'>
+                            <span>{count}</span>
+                        </p>
+
+                        <div className='PlusButtonDesktop'>
+                            <button onClick={handleAddProduct}><img src={IconPlus} alt="Add Icon" /></button>
+                        </div>
+                    </div>
+
+                    {/* Product Add to Cart */}
+                    <div className='CartButtonContainerDesktop'>
+
+                        <button className='CartButtonDesktop' onClick={() => addToCart(id, count)}>
+                            <img className='CartIconDesktop' src={IconCart} alt="Cart Icon" /> Add to Cart
+                        </button>
+                    </div>
                 </div>
-        </div>
-
-        {/* Product Add to Cart */}
-        <div className='CartButtonContainer'>
-
-          <button className='CartButton' onClick={() => addToCart(id, count)}>
-            <img className='CartIcon' src={IconCart} alt="Cart Icon" /> Add to Cart
-          </button>
-
-        </div>
-
+            </div>
     </div>
-
 
 );
 

@@ -7,7 +7,7 @@ import './ProductPageDesktop.css';
 
 // Components
 
-import ProductList  from "../data.js";
+import ProductList  from "../data.json";
 import ProductCardDesktop from './ProductCardDesktop.jsx';
 
 

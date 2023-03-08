@@ -8,6 +8,7 @@ import './ProductPageMobile.css';
 
 // Components
 
+
 // Buying Feature
 import IconMinus from "../images/icon-minus.svg"
 import IconPlus from "../images/icon-plus.svg"
@@ -17,10 +18,11 @@ import IconCart from "../images/icon-cart.svg"
 
 
 
+
 const ProductCardMobile = (props) => {
 
     // Getting data from product
-    const {companyName, productName, productDescription, img1, img2, img3, img4, productPrice, productDiscount, id} = props.data;
+    const {companyName, productName, productDescription, img1, images, productPrice, productDiscount, id} = props.data;
 
     // here we deconstruct and extract functions from Context.Provider wrapper
     const { addToCart, count, handleAddProduct, handleSubtractProduct, itemQuantity } = useContext(ShopContext);
@@ -42,65 +44,49 @@ const ProductCardMobile = (props) => {
     const actualPrice = price - (price * discount) / 100;
 
 
-
+  // console.log(images);
 
 
 return (
     <div >
 
          {/* Carousel Image Tab */} {/* Carousel Image Tab */} {/* Carousel Image Tab */}
-        <div className='CarouselContainer'>
-            <Carousel activeIndex={index} onSelect={handleSelect} indicators={false}>
-                <Carousel.Item interval={30000}>
-                  <img
-                  className="d-block w-100"
-                  src={img1}
-                  alt="First slide"
-                  />
-                </Carousel.Item>
-                <Carousel.Item interval={30000}>
-                  <img
-                  className="d-block w-100"
-                  src={img2}
-                  alt="Second slide"
-                  />
-                </Carousel.Item>
-                <Carousel.Item interval={30000}>
-                  <img
-                  className="d-block w-100"
-                  src={img3}
-                  alt="Third slide"
-                  />
-                </Carousel.Item>
-                <Carousel.Item interval={30000}>
-                  <img
-                  className="d-block w-100"
-                  src={img4}
-                  alt="Third slide"
-                  />
-                </Carousel.Item>
+        <div className='CarouselContainerMobile'>
+
+      
+          <Carousel activeIndex={index} onSelect={handleSelect} indicators={false}>
+
+            {images.map((j) => (
+            <Carousel.Item interval={30000}>
+                <img
+                className="d-block w-100"
+                src={process.env.PUBLIC_URL + j.url}
+                alt={process.env.PUBLIC_URL + j.alt} />
+            </Carousel.Item>
+            ))}
+
             </Carousel>
         </div>
 
 
         {/* Product Information Tab */} {/* Product Information Tab */} {/* Product Information Tab */}
-        <div  className='ProductInformationContainer'>
+        <div  className='ProductInformationContainerMobile'>
             {/* Product Brand */}
-            <div className='ProductCompanyContainer'>
-                <p className="ProductCompany">
+            <div>
+                <p className="ProductCompanyMobile">
                     {companyName}
                 </p>
             </div>
             {/* Product Name */}
-            <div  className='ProductNameContainer'>
+            <div  className='ProductNameContainerMobile'>
                 
-                <p className="ProductName">
+                <p className="ProductNameMobile">
                     {productName}
                 </p>
             </div>
             {/* Product Description */}
-            <div className='ProductDescriptionContainer'>
-                <p className="ProductDescription">
+            <div className='ProductDescriptionContainerMobile'>
+                <p className="ProductDescriptionMobile">
                     {productDescription}
                 </p>
             </div>
@@ -109,22 +95,22 @@ return (
 
         {/* Product Price Feature */}  {/* Product Price Feature */}  {/* Product Price Feature */}
         {/* Price, Discount and Actual Price */}
-        <div className='PricingContainer'>
-          <div className='PriceActual'>
+        <div className='PricingContainerMobile'>
+          <div className='PriceActualMobile'>
             <p>
               {"$" + actualPrice}
             </p>
           </div>
 
          
-          <div className='PriceDiscount'>
-          <div className='PriceDiscountBox'></div>
+          <div className='PriceDiscountMobile'>
+          <div className='PriceDiscountBoxMobile'></div>
             <p>
               {discount + "%"} 
             </p>
           </div>
 
-          <div className='PriceOld'>
+          <div className='PriceOldMobile'>
             <p>
               {"$" + price}
             </p>
@@ -134,27 +120,27 @@ return (
 
 
         {/* Product Add and Subtract */}
-        <div className='ItemCounterContainer'>
-            <div className='ItemCounterBackground'></div>
+        <div className='ItemCounterContainerMobile'>
+            <div className='ItemCounterBackgroundMobile'></div>
 
-                <div className='MinusButton'>
+                <div className='MinusButtonMobile'>
                     <button onClick={handleSubtractProduct}><img src={IconMinus} alt="Subtract Icon"/></button>
                 </div>
 
-                <p className='Count'>
+                <p className='CountMobile'>
                     <span>{count}</span>
                 </p>
 
-                <div className='PlusButton'>
+                <div className='PlusButtonMobile'>
                     <button onClick={handleAddProduct}><img src={IconPlus} alt="Add Icon" /></button>
                 </div>
         </div>
 
         {/* Product Add to Cart */}
-        <div className='CartButtonContainer'>
+        <div className='CartButtonContainerMobile'>
 
-          <button className='CartButton' onClick={() => addToCart(id, count)}>
-            <img className='CartIcon' src={IconCart} alt="Cart Icon" /> Add to Cart
+          <button className='CartButtonMobile' onClick={() => addToCart(id, count)}>
+            <img className='CartIconMobile' src={IconCart} alt="Cart Icon" /> Add to Cart
           </button>
 
         </div>
@@ -166,4 +152,5 @@ return (
 
 
 }
+// this gets exported to ProductPageMobile
 export default ProductCardMobile;

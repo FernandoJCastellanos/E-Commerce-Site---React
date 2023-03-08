@@ -1,6 +1,6 @@
 // Environment
 import React, {createContext, useState} from "react";
-
+import { useMediaQuery } from '@material-ui/core';
 // CSS
 
 
@@ -66,11 +66,16 @@ const ShopContextProvider = (props) => {
 
    
 
+
+    const isMobile = useMediaQuery('(max-width: 1020px)');
+
+
+
     
 
 
     // this is how we export and import functions to other components with ContextAPI
-    const contextValue = { removeFromCart, cartItems, addToCart, count, handleAddProduct, handleSubtractProduct, itemQuantity, };
+    const contextValue = { removeFromCart, cartItems, addToCart, count, handleAddProduct, handleSubtractProduct, itemQuantity, isMobile };
 
         console.log(cartItems);
     return(

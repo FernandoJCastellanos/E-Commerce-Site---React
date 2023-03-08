@@ -2,10 +2,10 @@
 import React, {useState, useContext} from 'react';
 
 // CSS
-
+import "./NavBarMobile.css";
 
 // Components
-import iconCart from "../images/icon-cart.svg"
+import iconCart from "../images/icon-cart.svg";
 import { ShopContext } from "../shop-context";
 import CartItemMobile from "./CartItemMobile";
 import ProductList from "../data";
@@ -17,7 +17,7 @@ function NavItemShoppingCartMobile() {
     const { cartItems, itemQuantity, ItemQuantityContainerVisibility   } = useContext(ShopContext);
 
     // ShoppingCart Class to hide/show menu
-    const [ShoppingCartMenuVisibility, setShoppingCartMenuVisibility] = useState("ShoppingCartHidden");
+    const [ShoppingCartMenuVisibility, setShoppingCartMenuVisibility] = useState("ShoppingCartHiddenMobile");
 
     // ShoppingCart BaseStatus
     const [ShoppingCartStatus, setShoppingCartStatus] = useState(false);
@@ -27,8 +27,7 @@ function NavItemShoppingCartMobile() {
     const ShoppingCartTrigger = () => {
         // Trigger is showing the menu
         if(!ShoppingCartStatus) {
-            setShoppingCartMenuVisibility("ShoppingCartMenuShow")
-
+            setShoppingCartMenuVisibility("ShoppingCartMenuShowMobile")
         }
         // Trigger is hiding the menu
         else {
@@ -51,10 +50,10 @@ function NavItemShoppingCartMobile() {
                 {/* Item Quantity Badge */}
                 {itemQuantity > 0 ? (
                 <div>
-                    <p className='ItemQuantity'>{itemQuantity}</p>
+                    <p className='ItemQuantityMobile'>{itemQuantity}</p>
                 </div>
                 ) : (
-                    <div className='ItemQuantityContainerHidden'></div>
+                    <div></div>
                 )}
             <img  src={iconCart} alt="Shopping Cart Icon" />
         </button>
@@ -63,20 +62,20 @@ function NavItemShoppingCartMobile() {
 
 
         <div className={ShoppingCartMenuVisibility}>
-            <div className='ShoppingCartMenuBox'>
-                <div className='ShoppingCartMenuTitle'>
+            <div className='ShoppingCartMenuBoxMobile'>
+                <div className='ShoppingCartMenuTitleMobile'>
                     <p>
                         Cart
                     </p>             
                 </div>
-                <hr className='CartHR'/>
-                <div className='ShoppingCartMenuCart'>
+                <hr className='CartHRMobile'/>
+                <div className='ShoppingCartMenuCartMobile'>
                         {/* turned off for bug, turn back on */}
                         {ProductList.map((product) => {
                             if (cartItems[product.id] !== 0) {
                                 return <CartItemMobile data={product}/>
                             } else {
-                                return <p className='ShoppingCartNoItems'>No items in cart.</p>
+                                return <p className='ShoppingCartNoItemsMobile'>No items in cart.</p>
                             }
                             
                         })}

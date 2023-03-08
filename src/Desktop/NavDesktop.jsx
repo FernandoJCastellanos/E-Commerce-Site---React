@@ -13,12 +13,12 @@ import NavItemProfileIcon from '../NavItemProfileIcon';
 
 function NavBarDesktop() {
     return (
-        <div className='NavBarDesktopContainer'>
+        <div className='NavBarDesktopContainerDesktop'>
 
-            <div className='NavItemLogoContainer'>
+            <div className='NavItemLogoContainerDesktop'>
                 <NavItemLogo />
             </div>
-            <div className='LinkContainer'>
+            <div className='LinkContainerDesktop'>
                 <a className="NavBarItemTextDeskop" href=''>
                     <p>
                         Collections
@@ -45,10 +45,10 @@ function NavBarDesktop() {
                     </p>
                 </a>
             </div>
-            <div className='NavItemShoppingContainer'>
+            <div className='NavItemShoppingContainerDeskop'>
                 <NavItemShoppingCartDesktop />
             </div>
-            <div className='NavItemProfileIconContainer'>
+            <div className='NavItemProfileIconContainerDeskop'>
                 <NavItemProfileIcon />
             </div>
 

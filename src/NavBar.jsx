@@ -1,21 +1,30 @@
 // Environment
-import React from 'react';
+import React, { useContext } from 'react';
 
 // CSS
 
 
 // Components
 import NavMobile from './Mobile/NavMobile';
-// import NavDesktop from './Desktop/NavDesktop';
+import NavDesktop from './Desktop/NavDesktop';
 
-
+import { ShopContext } from "./shop-context";
 
 
 function NavBar() {
+
+    const { isMobile } = useContext(ShopContext);
+
+
+
     return (
         <div>
-            <NavMobile  />
-            {/* <NavDesktop /> */}
+        {/* <NavMobile  /> */}
+            { isMobile ? (
+                <NavMobile  />
+            ) : (
+                <NavDesktop />
+            )}
         </div>
     );
 }
