@@ -1,8 +1,12 @@
 {
   "files": {
     "main.css": "/FernandoJCastellanos/E-Commerce-Site---React/static/css/main.c2d1b35f.css",
-    "main.js": "/FernandoJCastellanos/E-Commerce-Site---React/static/js/main.a095dfb8.js",
+    "main.js": "/FernandoJCastellanos/E-Commerce-Site---React/static/js/main.0fa13527.js",
     "static/js/787.28cb0dcd.chunk.js": "/FernandoJCastellanos/E-Commerce-Site---React/static/js/787.28cb0dcd.chunk.js",
+    "static/media/image-product-2.jpg": "/FernandoJCastellanos/E-Commerce-Site---React/static/media/image-product-2.c8bb0aaccecdebb16596.jpg",
+    "static/media/image-product-1.jpg": "/FernandoJCastellanos/E-Commerce-Site---React/static/media/image-product-1.520cc50bd13955f55cb2.jpg",
+    "static/media/image-product-3.jpg": "/FernandoJCastellanos/E-Commerce-Site---React/static/media/image-product-3.af5c71ba9ffcc0b8b54d.jpg",
+    "static/media/image-product-4.jpg": "/FernandoJCastellanos/E-Commerce-Site---React/static/media/image-product-4.9962862ef3eff6d65e5b.jpg",
     "static/media/logo.svg": "/FernandoJCastellanos/E-Commerce-Site---React/static/media/logo.4fe9c1e86cf9bf600f0c239f6a6e5317.svg",
     "index.html": "/FernandoJCastellanos/E-Commerce-Site---React/index.html",
     "static/media/icon-delete.svg": "/FernandoJCastellanos/E-Commerce-Site---React/static/media/icon-delete.1fd1f1f7d9f8ce5557b44ca3470a18b8.svg",
@@ -14,11 +18,11 @@
     "static/media/icon-previous.svg": "/FernandoJCastellanos/E-Commerce-Site---React/static/media/icon-previous.80616402c611cc0a6651.svg",
     "static/media/icon-next.svg": "/FernandoJCastellanos/E-Commerce-Site---React/static/media/icon-next.9621183a551a9985b4bd.svg",
     "main.c2d1b35f.css.map": "/FernandoJCastellanos/E-Commerce-Site---React/static/css/main.c2d1b35f.css.map",
-    "main.a095dfb8.js.map": "/FernandoJCastellanos/E-Commerce-Site---React/static/js/main.a095dfb8.js.map",
+    "main.0fa13527.js.map": "/FernandoJCastellanos/E-Commerce-Site---React/static/js/main.0fa13527.js.map",
     "787.28cb0dcd.chunk.js.map": "/FernandoJCastellanos/E-Commerce-Site---React/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2d1b35f.css",
-    "static/js/main.a095dfb8.js"
+    "static/js/main.0fa13527.js"
   ]
 }
