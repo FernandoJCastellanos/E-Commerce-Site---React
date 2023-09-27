@@ -14,7 +14,10 @@ import IconMinus from "../images/icon-minus.svg"
 import IconPlus from "../images/icon-plus.svg"
 import IconCart from "../images/icon-cart.svg"
 
-
+import image1 from "../images/image-product-1.jpg"
+import image2 from "../images/image-product-2.jpg"
+import image3 from "../images/image-product-3.jpg"
+import image4 from "../images/image-product-4.jpg"
 
 
 
@@ -22,8 +25,8 @@ import IconCart from "../images/icon-cart.svg"
 const ProductCardMobile = (props) => {
 
     // Getting data from product
-    const {companyName, productName, productDescription, img1, images, productPrice, productDiscount, id} = props.data;
-
+    const {companyName, productName, productDescription, img1, productPrice, productDiscount, id} = props.data;
+    const images = [image1, image2, image3,image4 ]
     // here we deconstruct and extract functions from Context.Provider wrapper
     const { addToCart, count, handleAddProduct, handleSubtractProduct, itemQuantity } = useContext(ShopContext);
 
@@ -60,8 +63,8 @@ return (
             <Carousel.Item interval={30000}>
                 <img
                 className="d-block w-100"
-                src={process.env.PUBLIC_URL + j.url}
-                alt={process.env.PUBLIC_URL + j.alt} />
+                src={j}
+                alt="shoe" />
             </Carousel.Item>
             ))}
 

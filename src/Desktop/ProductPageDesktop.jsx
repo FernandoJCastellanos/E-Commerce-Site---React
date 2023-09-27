@@ -12,6 +12,7 @@ import ProductCardDesktop from './ProductCardDesktop.jsx';
 
 
 
+// console.log(ProductList)
 
 function ProductPageDesktop() {
     return (

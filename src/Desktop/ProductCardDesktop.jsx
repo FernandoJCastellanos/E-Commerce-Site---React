@@ -1,7 +1,13 @@
 // Environment
 import React, {useState, useContext} from "react";
-import Carousel from 'react-bootstrap/Carousel';
 import { ShopContext } from "../shop-context";
+
+
+
+import image1 from "../images/image-product-1.jpg"
+import image2 from "../images/image-product-2.jpg"
+import image3 from "../images/image-product-3.jpg"
+import image4 from "../images/image-product-4.jpg"
 
 // CSS
 import './ProductPageDesktop.css';
@@ -18,8 +24,9 @@ import IconCart from "../images/icon-cart.svg"
 const ProductCardMobile = (props) => {
 
     // Getting data from product
-    const {companyName, productName, productDescription, productPrice, productDiscount, id, images} = props.data;
+    const {companyName, productName, productDescription, productPrice, productDiscount, id} = props.data;
 
+    const images = [image1, image2, image3,image4 ]
     // here we deconstruct and extract functions from Context.Provider wrapper
     const { addToCart, count, handleAddProduct, handleSubtractProduct } = useContext(ShopContext);
 
@@ -40,7 +47,7 @@ const ProductCardMobile = (props) => {
     const actualPrice = price - (price * discount) / 100;
     
     const FirstImage = images[0]
-    const setFirstImage = FirstImage.url
+    const setFirstImage = FirstImage
 
     const [ mainImageState, setMainImageState ] = useState(setFirstImage);
 
@@ -49,10 +56,8 @@ const ProductCardMobile = (props) => {
     }
 
 
-
 return (
     <div className="ProductPageContainerDesktop" >
-
         {/* Image Container */}{/* Image Container */}{/* Image Container */}
         <div className="ImageContainerDesktop">
             <div  >
@@ -62,8 +67,8 @@ return (
                 {images.map((j) => {
                     return (
                     <div >
-                        <button className="ButtonImageDesktop" onClick={() => HandleSetMainImageState(j.url)}  >
-                            <img className="SmallImageDesktop" src={j.url} alt={j.alt} />
+                        <button className="ButtonImageDesktop" onClick={() => HandleSetMainImageState(j)}  >
+                            <img className="SmallImageDesktop" src={j} alt=" shoe" />
                         </button>
                     </div>
                     )})}

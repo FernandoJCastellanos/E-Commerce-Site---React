@@ -10,6 +10,7 @@ import RemoveIcon from "../images/icon-delete.svg";
 import { ShopContext } from "../shop-context";
 
 
+import image1 from "../images/image-product-1.jpg"
 
 
 
@@ -30,7 +31,6 @@ export default function CartItem(props) {
 
     const totalPrice = actualPrice*cartItems[id];
 
-    const image1 = images[0]
     
 
 
@@ -40,7 +40,7 @@ export default function CartItem(props) {
       <div >
 
         <div >
-          <img className='CartItemImage' src={process.env.PUBLIC_URL + image1.url} alt="ProductImage" />
+          <img className='CartItemImage' src={image1} alt="ProductImage" />
         </div>
         
         <div className='CartItemNameContainer'>

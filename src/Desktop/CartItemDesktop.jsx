@@ -10,13 +10,17 @@ import "./CartItemDesktop.css";
 import RemoveIcon from "../images/icon-delete.svg";
 import { ShopContext } from "../shop-context";
 
-
+import image1 from "../images/image-product-1.jpg"
+import image2 from "../images/image-product-2.jpg"
+import image3 from "../images/image-product-3.jpg"
+import image4 from "../images/image-product-4.jpg"
 export default function CartItem(props) {
 
 
     // Getting data from product
-    const {companyName, productName, productDescription, images, productPrice, productDiscount, id} = props.data;
-  
+    const {companyName, productName, productDescription, productPrice, productDiscount, id} = props.data;
+    const images = [image1, image2, image3,image4 ]
+
     // Setting Prices
     const actualPrice = (productPrice * productDiscount) / 100;
 
@@ -27,7 +31,7 @@ export default function CartItem(props) {
     const totalPrice = actualPrice*cartItems[id];
 
 
-    const image1 = images[0]
+    const image = images[0]
     
 
   return (
@@ -36,7 +40,7 @@ export default function CartItem(props) {
       <div >
 
         <div >
-          <img className='CartItemImage' src={process.env.PUBLIC_URL + image1.url} alt="ProductImage" />
+          <img className='CartItemImage' src={image} alt="ProductImage" />
         </div>
         
         <div className='CartItemNameContainer'>
